@@ -17,4 +17,4 @@ jobs:
           pip install ansible ansible-lint
 
       - name: Ejecutar Ansible Lint
-        run: ansible-lint site.yml
+        run: ansible-lint main.yml

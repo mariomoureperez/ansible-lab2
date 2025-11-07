@@ -1,14 +1,13 @@
 ---
 # Configuración de servidor web
 - name: Instalar Nginx
-  apt:
+  ansible.builtin.apt:
     name: nginx
     state: present
     update_cache: true
 
 - name: Asegurar que Nginx está en ejecución
-  service:
+  ansible.builtin.service:
     name: nginx
     state: started
     enabled: true
-
