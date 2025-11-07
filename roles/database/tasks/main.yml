@@ -1,0 +1,14 @@
+---
+# Configuración de base de datos
+- name: Instalar MariaDB
+  apt:
+    name: mariadb-server
+    state: present
+    update_cache: true
+
+- name: Asegurar que MariaDB está en ejecución
+  service:
+    name: mariadb
+    state: started
+    enabled: true
+
